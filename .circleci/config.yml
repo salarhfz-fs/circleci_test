@@ -17,9 +17,8 @@ jobs:
       - run:
           name: "Create env file"
           command: |
-            cat << EOF > .env
-            TEST_VAR=${TEST_VAR}
-            EOF
+            echo TEST_VAR=${TEST_VAR} > .env
+            echo VAR_TEST=${VAR_TEST} >> .env
 
       - run:
           name: "Install Deps"
